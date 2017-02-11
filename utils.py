@@ -51,3 +51,9 @@ def bestResultFor(scores):
     Return the result with the highest score
     '''
     return sorted(scores, reverse=True)[0][1]
+
+def repeatingKeyXor(s, key):
+    '''
+    Encrypt the string s with the given key using repeating-key XOR
+    '''
+    return ''.join(['%02x'%(ord(c) ^ ord(key[i % len(key)])) for i, c in enumerate(s)])

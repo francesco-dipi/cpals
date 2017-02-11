@@ -1,4 +1,4 @@
-from utils import *
+from utils import bestResultFor, computeScoresXorAgainstAllChars
 
 # Detect single-character XOR
 
