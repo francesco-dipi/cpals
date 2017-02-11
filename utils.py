@@ -17,3 +17,9 @@ def hex2bin64(s):
     and return the corresponding string encoded in base64.
     '''
     return ''.join(hex2chr(s)).encode('base64')
+
+def strXor(s1, s2):
+    '''
+    Take two equal-length buffers and produces their XOR combination
+    '''
+    return hex(int(s1, 16) ^ int(s2, 16)).replace('0x','').replace('L', '')
